@@ -1,33 +1,33 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: D:/Unity Games/Uni VR Modulis/VR-Baubai/Packages/manifest.json
+    m_FilePath: G:/Projektai/VR-Baubai/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638628648844541511
-    m_Hash: 270263783
+      ticks: 638645552928291907
+    m_Hash: 3758410768
   m_LockFileStatus:
-    m_FilePath: D:/Unity Games/Uni VR Modulis/VR-Baubai/Packages/packages-lock.json
+    m_FilePath: G:/Projektai/VR-Baubai/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638628648844621568
-    m_Hash: 2768329
+      ticks: 638645552928351962
+    m_Hash: 2724635899
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
-m_ProjectPath: D:/Unity Games/Uni VR Modulis/VR-Baubai/Packages
-m_EditorVersion: 2022.3.47f1 (88c277b85d21)
+m_ProjectPath: G:/Projektai/VR-Baubai/Packages
+m_EditorVersion: 2022.3.48f1 (8bf49c377ebf)
 m_ResolvedPackages:
 - packageId: com.unity.collab-proxy@2.5.1
   testable: 0
   isDirectDependency: 1
   version: 2.5.1
   source: 1
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.collab-proxy@2.5.1
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.collab-proxy@2.5.1
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Version Control
@@ -118,9 +118,11 @@ m_ResolvedPackages:
     - 2.4.3
     - 2.4.4
     - 2.5.1
+    - 2.5.2
     compatible:
     - 2.5.1
-    recommended: 2.5.1
+    - 2.5.2
+    recommended: 2.5.2
     deprecated: []
   dependencies: []
   resolvedDependencies: []
@@ -171,7 +173,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.1
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.feature.development@1.0.1
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.feature.development@1.0.1
   assetPath: Packages/com.unity.feature.development
   name: com.unity.feature.development
   displayName: Engineering
@@ -265,7 +267,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 3.0.7
   source: 1
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.textmeshpro@3.0.7
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.textmeshpro@3.0.7
   assetPath: Packages/com.unity.textmeshpro
   name: com.unity.textmeshpro
   displayName: TextMeshPro
@@ -460,7 +462,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.7.6
   source: 1
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.timeline@1.7.6
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.timeline@1.7.6
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -630,7 +632,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.ugui@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.ugui@1.0.0
   assetPath: Packages/com.unity.ugui
   name: com.unity.ugui
   displayName: Unity UI
@@ -703,7 +705,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.9.4
   source: 1
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.visualscripting@1.9.4
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.visualscripting@1.9.4
   assetPath: Packages/com.unity.visualscripting
   name: com.unity.visualscripting
   displayName: Visual Scripting
@@ -797,12 +799,12 @@ m_ResolvedPackages:
   isDeprecated: 0
   deprecationMessage: 
   fingerprint: 
-- packageId: com.unity.xr.interaction.toolkit@3.0.5
+- packageId: com.unity.xr.interaction.toolkit@2.6.3
   testable: 0
   isDirectDependency: 1
-  version: 3.0.5
+  version: 2.6.3
   source: 1
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.xr.interaction.toolkit@3.0.5
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.xr.interaction.toolkit@2.6.3
   assetPath: Packages/com.unity.xr.interaction.toolkit
   name: com.unity.xr.interaction.toolkit
   displayName: XR Interaction Toolkit
@@ -883,10 +885,8 @@ m_ResolvedPackages:
   dependencies:
   - name: com.unity.ugui
     version: 1.0.0
-  - name: com.unity.modules.xr
-    version: 1.0.0
   - name: com.unity.inputsystem
-    version: 1.8.1
+    version: 1.7.0
   - name: com.unity.mathematics
     version: 1.2.6
   - name: com.unity.modules.audio
@@ -897,6 +897,8 @@ m_ResolvedPackages:
     version: 2.2.3
   - name: com.unity.modules.physics
     version: 1.0.0
+  - name: com.unity.xr.legacyinputhelpers
+    version: 2.1.10
   resolvedDependencies:
   - name: com.unity.ugui
     version: 1.0.0
@@ -904,17 +906,11 @@ m_ResolvedPackages:
     version: 1.0.0
   - name: com.unity.modules.imgui
     version: 1.0.0
-  - name: com.unity.modules.xr
-    version: 1.0.0
-  - name: com.unity.modules.physics
+  - name: com.unity.inputsystem
+    version: 1.11.0
+  - name: com.unity.modules.uielements
     version: 1.0.0
   - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.modules.subsystems
-    version: 1.0.0
-  - name: com.unity.inputsystem
-    version: 1.8.1
-  - name: com.unity.modules.uielements
     version: 1.0.0
   - name: com.unity.mathematics
     version: 1.2.6
@@ -922,6 +918,16 @@ m_ResolvedPackages:
     version: 1.0.0
   - name: com.unity.xr.core-utils
     version: 2.3.0
+  - name: com.unity.modules.xr
+    version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  - name: com.unity.modules.subsystems
+    version: 1.0.0
+  - name: com.unity.xr.legacyinputhelpers
+    version: 2.1.10
+  - name: com.unity.modules.vr
+    version: 1.0.0
   keywords:
   - XR
   - VR
@@ -937,13 +943,13 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638579636310000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.0/manual/index.html
+  datePublishedTicks: 638578507040000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@2.6/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.com/Unity-Technologies/com.unity.xr.interaction.toolkit.git
-    revision: 12b3e5030eeaf89050b9ebf69610254d665b9ddb
+    revision: aa4c569bb6cb95da73b164b065533379e4e45301
     path: 
   unityLifecycle:
     version: 2.6.3
@@ -959,7 +965,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 4.5.0
   source: 1
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.xr.management@4.5.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.xr.management@4.5.0
   assetPath: Packages/com.unity.xr.management
   name: com.unity.xr.management
   displayName: XR Plugin Management
@@ -1098,7 +1104,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.12.0
   source: 1
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.xr.openxr@1.12.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.xr.openxr@1.12.0
   assetPath: Packages/com.unity.xr.openxr
   name: com.unity.xr.openxr
   displayName: OpenXR Plugin
@@ -1147,9 +1153,11 @@ m_ResolvedPackages:
     - 1.12.0-exp.1
     - 1.12.0
     - 1.12.1
+    - 1.13.0
     compatible:
     - 1.12.0
     - 1.12.1
+    - 1.13.0
     recommended: 1.12.1
     deprecated: []
   dependencies:
@@ -1163,7 +1171,7 @@ m_ResolvedPackages:
     version: 2.1.2
   resolvedDependencies:
   - name: com.unity.inputsystem
-    version: 1.8.1
+    version: 1.11.0
   - name: com.unity.modules.uielements
     version: 1.0.0
   - name: com.unity.modules.ui
@@ -1223,7 +1231,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.ai@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.ai@1.0.0
   assetPath: Packages/com.unity.modules.ai
   name: com.unity.modules.ai
   displayName: AI
@@ -1279,7 +1287,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.androidjni@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.androidjni@1.0.0
   assetPath: Packages/com.unity.modules.androidjni
   name: com.unity.modules.androidjni
   displayName: Android JNI
@@ -1334,7 +1342,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.animation@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.animation@1.0.0
   assetPath: Packages/com.unity.modules.animation
   name: com.unity.modules.animation
   displayName: Animation
@@ -1390,7 +1398,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.assetbundle@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.assetbundle@1.0.0
   assetPath: Packages/com.unity.modules.assetbundle
   name: com.unity.modules.assetbundle
   displayName: Asset Bundle
@@ -1446,7 +1454,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.audio@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.audio@1.0.0
   assetPath: Packages/com.unity.modules.audio
   name: com.unity.modules.audio
   displayName: Audio
@@ -1502,7 +1510,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.cloth@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.cloth@1.0.0
   assetPath: Packages/com.unity.modules.cloth
   name: com.unity.modules.cloth
   displayName: Cloth
@@ -1562,7 +1570,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.director@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.director@1.0.0
   assetPath: Packages/com.unity.modules.director
   name: com.unity.modules.director
   displayName: Director
@@ -1626,7 +1634,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.imageconversion@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.imageconversion@1.0.0
   assetPath: Packages/com.unity.modules.imageconversion
   name: com.unity.modules.imageconversion
   displayName: Image Conversion
@@ -1683,7 +1691,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.imgui@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.imgui@1.0.0
   assetPath: Packages/com.unity.modules.imgui
   name: com.unity.modules.imgui
   displayName: IMGUI
@@ -1739,7 +1747,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0
   assetPath: Packages/com.unity.modules.jsonserialize
   name: com.unity.modules.jsonserialize
   displayName: JSONSerialize
@@ -1795,7 +1803,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.particlesystem@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.particlesystem@1.0.0
   assetPath: Packages/com.unity.modules.particlesystem
   name: com.unity.modules.particlesystem
   displayName: Particle System
@@ -1851,7 +1859,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.physics@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.physics@1.0.0
   assetPath: Packages/com.unity.modules.physics
   name: com.unity.modules.physics
   displayName: Physics
@@ -1907,7 +1915,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.physics2d@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.physics2d@1.0.0
   assetPath: Packages/com.unity.modules.physics2d
   name: com.unity.modules.physics2d
   displayName: Physics 2D
@@ -1963,7 +1971,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.screencapture@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.screencapture@1.0.0
   assetPath: Packages/com.unity.modules.screencapture
   name: com.unity.modules.screencapture
   displayName: Screen Capture
@@ -2023,7 +2031,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.terrain@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.terrain@1.0.0
   assetPath: Packages/com.unity.modules.terrain
   name: com.unity.modules.terrain
   displayName: Terrain
@@ -2079,7 +2087,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0
   assetPath: Packages/com.unity.modules.terrainphysics
   name: com.unity.modules.terrainphysics
   displayName: Terrain Physics
@@ -2143,7 +2151,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.tilemap@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.tilemap@1.0.0
   assetPath: Packages/com.unity.modules.tilemap
   name: com.unity.modules.tilemap
   displayName: Tilemap
@@ -2202,7 +2210,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.ui@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.ui@1.0.0
   assetPath: Packages/com.unity.modules.ui
   name: com.unity.modules.ui
   displayName: UI
@@ -2258,7 +2266,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.uielements@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.uielements@1.0.0
   assetPath: Packages/com.unity.modules.uielements
   name: com.unity.modules.uielements
   displayName: UIElements
@@ -2326,7 +2334,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.umbra@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.umbra@1.0.0
   assetPath: Packages/com.unity.modules.umbra
   name: com.unity.modules.umbra
   displayName: Umbra
@@ -2382,7 +2390,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0
   assetPath: Packages/com.unity.modules.unityanalytics
   name: com.unity.modules.unityanalytics
   displayName: Unity Analytics
@@ -2446,7 +2454,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequest
   name: com.unity.modules.unitywebrequest
   displayName: Unity Web Request
@@ -2502,7 +2510,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestassetbundle
   name: com.unity.modules.unitywebrequestassetbundle
   displayName: Unity Web Request Asset Bundle
@@ -2566,7 +2574,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestaudio
   name: com.unity.modules.unitywebrequestaudio
   displayName: Unity Web Request Audio
@@ -2630,7 +2638,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequesttexture
   name: com.unity.modules.unitywebrequesttexture
   displayName: Unity Web Request Texture
@@ -2694,7 +2702,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestwww
   name: com.unity.modules.unitywebrequestwww
   displayName: Unity Web Request WWW
@@ -2774,7 +2782,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.vehicles@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.vehicles@1.0.0
   assetPath: Packages/com.unity.modules.vehicles
   name: com.unity.modules.vehicles
   displayName: Vehicles
@@ -2834,7 +2842,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.video@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.video@1.0.0
   assetPath: Packages/com.unity.modules.video
   name: com.unity.modules.video
   displayName: Video
@@ -2902,7 +2910,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.vr@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.vr@1.0.0
   assetPath: Packages/com.unity.modules.vr
   name: com.unity.modules.vr
   displayName: VR
@@ -2972,7 +2980,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.wind@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.wind@1.0.0
   assetPath: Packages/com.unity.modules.wind
   name: com.unity.modules.wind
   displayName: Wind
@@ -3028,7 +3036,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.xr@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.xr@1.0.0
   assetPath: Packages/com.unity.modules.xr
   name: com.unity.modules.xr
   displayName: XR
@@ -3096,7 +3104,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.modules.subsystems@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.modules.subsystems@1.0.0
   assetPath: Packages/com.unity.modules.subsystems
   name: com.unity.modules.subsystems
   displayName: Subsystems
@@ -3151,12 +3159,136 @@ m_ResolvedPackages:
   isDeprecated: 0
   deprecationMessage: 
   fingerprint: 
+- packageId: com.unity.inputsystem@1.11.0
+  testable: 0
+  isDirectDependency: 0
+  version: 1.11.0
+  source: 1
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.inputsystem@1.11.0
+  assetPath: Packages/com.unity.inputsystem
+  name: com.unity.inputsystem
+  displayName: Input System
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: A new input system which can be used as a more extensible and customizable
+    alternative to Unity's classic input system in UnityEngine.Input.
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 0.1.2-preview
+    - 0.2.0-preview
+    - 0.2.1-preview
+    - 0.2.6-preview
+    - 0.2.8-preview
+    - 0.2.10-preview
+    - 0.9.0-preview
+    - 0.9.1-preview
+    - 0.9.2-preview
+    - 0.9.3-preview
+    - 0.9.4-preview
+    - 0.9.5-preview
+    - 0.9.6-preview
+    - 1.0.0-preview
+    - 1.0.0-preview.1
+    - 1.0.0-preview.2
+    - 1.0.0-preview.3
+    - 1.0.0-preview.4
+    - 1.0.0-preview.5
+    - 1.0.0-preview.6
+    - 1.0.0-preview.7
+    - 1.0.0
+    - 1.0.1
+    - 1.0.2
+    - 1.1.0-pre.5
+    - 1.1.0-pre.6
+    - 1.1.0-preview.1
+    - 1.1.0-preview.2
+    - 1.1.0-preview.3
+    - 1.1.1
+    - 1.2.0
+    - 1.3.0
+    - 1.4.1
+    - 1.4.2
+    - 1.4.3
+    - 1.4.4
+    - 1.5.0
+    - 1.5.1
+    - 1.6.1
+    - 1.6.3
+    - 1.7.0
+    - 1.8.0-pre.1
+    - 1.8.0-pre.2
+    - 1.8.0
+    - 1.8.1
+    - 1.8.2
+    - 1.9.0
+    - 1.10.0
+    - 1.11.0
+    - 1.11.1
+    compatible:
+    - 1.11.0
+    - 1.11.1
+    recommended: 1.11.1
+    deprecated: []
+  dependencies:
+  - name: com.unity.modules.uielements
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.modules.uielements
+    version: 1.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  keywords:
+  - input
+  - events
+  - keyboard
+  - mouse
+  - gamepad
+  - touch
+  - vr
+  - xr
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638616525750940000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.inputsystem@1.11/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/InputSystem.git
+    revision: 091397a6966a69d76de7c06c34b45d082867bbec
+    path: 
+  unityLifecycle:
+    version: 1.11.0
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.xr.core-utils@2.3.0
   testable: 0
   isDirectDependency: 0
   version: 2.3.0
   source: 1
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.xr.core-utils@2.3.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.xr.core-utils@2.3.0
   assetPath: Packages/com.unity.xr.core-utils
   name: com.unity.xr.core-utils
   displayName: XR Core Utilities
@@ -3258,7 +3390,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.1.10
   source: 1
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.10
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.10
   assetPath: Packages/com.unity.xr.legacyinputhelpers
   name: com.unity.xr.legacyinputhelpers
   displayName: XR Legacy Input Helpers
@@ -3358,142 +3490,12 @@ m_ResolvedPackages:
   isDeprecated: 0
   deprecationMessage: 
   fingerprint: 
-- packageId: com.unity.inputsystem@1.8.1
-  testable: 0
-  isDirectDependency: 0
-  version: 1.8.1
-  source: 1
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.inputsystem@1.8.1
-  assetPath: Packages/com.unity.inputsystem
-  name: com.unity.inputsystem
-  displayName: Input System
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: assets
-  description: A new input system which can be used as a more extensible and customizable
-    alternative to Unity's classic input system in UnityEngine.Input.
-  status: 0
-  errors: []
-  versions:
-    all:
-    - 0.1.2-preview
-    - 0.2.0-preview
-    - 0.2.1-preview
-    - 0.2.6-preview
-    - 0.2.8-preview
-    - 0.2.10-preview
-    - 0.9.0-preview
-    - 0.9.1-preview
-    - 0.9.2-preview
-    - 0.9.3-preview
-    - 0.9.4-preview
-    - 0.9.5-preview
-    - 0.9.6-preview
-    - 1.0.0-preview
-    - 1.0.0-preview.1
-    - 1.0.0-preview.2
-    - 1.0.0-preview.3
-    - 1.0.0-preview.4
-    - 1.0.0-preview.5
-    - 1.0.0-preview.6
-    - 1.0.0-preview.7
-    - 1.0.0
-    - 1.0.1
-    - 1.0.2
-    - 1.1.0-pre.5
-    - 1.1.0-pre.6
-    - 1.1.0-preview.1
-    - 1.1.0-preview.2
-    - 1.1.0-preview.3
-    - 1.1.1
-    - 1.2.0
-    - 1.3.0
-    - 1.4.1
-    - 1.4.2
-    - 1.4.3
-    - 1.4.4
-    - 1.5.0
-    - 1.5.1
-    - 1.6.1
-    - 1.6.3
-    - 1.7.0
-    - 1.8.0-pre.1
-    - 1.8.0-pre.2
-    - 1.8.0
-    - 1.8.1
-    - 1.8.2
-    - 1.9.0
-    - 1.10.0
-    - 1.11.0
-    compatible:
-    - 1.7.0
-    - 1.8.0-pre.1
-    - 1.8.0-pre.2
-    - 1.8.0
-    - 1.8.1
-    - 1.8.2
-    - 1.9.0
-    - 1.10.0
-    - 1.11.0
-    recommended: 1.7.0
-    deprecated: []
-  dependencies:
-  - name: com.unity.modules.uielements
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.modules.uielements
-    version: 1.0.0
-  - name: com.unity.modules.ui
-    version: 1.0.0
-  - name: com.unity.modules.imgui
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  keywords:
-  - input
-  - events
-  - keyboard
-  - mouse
-  - gamepad
-  - touch
-  - vr
-  - xr
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 638460930440000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.inputsystem@1.8/manual/index.html
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.com/Unity-Technologies/InputSystem.git
-    revision: 4412578426d34b7b2a0ef17db295e39e7e26b2fa
-    path: 
-  unityLifecycle:
-    version: 1.7.0
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  fingerprint: 
 - packageId: com.unity.mathematics@1.2.6
   testable: 0
   isDirectDependency: 0
   version: 1.2.6
   source: 1
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.mathematics@1.2.6
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.mathematics@1.2.6
   assetPath: Packages/com.unity.mathematics
   name: com.unity.mathematics
   displayName: Mathematics
@@ -3570,7 +3572,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.0.22
   source: 1
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.ide.visualstudio@2.0.22
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.ide.visualstudio@2.0.22
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -3660,7 +3662,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 3.0.31
   source: 1
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.ide.rider@3.0.31
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.ide.rider@3.0.31
   assetPath: Packages/com.unity.ide.rider
   name: com.unity.ide.rider
   displayName: JetBrains Rider Editor
@@ -3763,7 +3765,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.2.5
   source: 1
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.ide.vscode@1.2.5
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.ide.vscode@1.2.5
   assetPath: Packages/com.unity.ide.vscode
   name: com.unity.ide.vscode
   displayName: Visual Studio Code Editor
@@ -3832,7 +3834,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 1
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.editorcoroutines@1.0.0
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.editorcoroutines@1.0.0
   assetPath: Packages/com.unity.editorcoroutines
   name: com.unity.editorcoroutines
   displayName: Editor Coroutines
@@ -3898,7 +3900,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.2.2
   source: 1
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.performance.profile-analyzer@1.2.2
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.performance.profile-analyzer@1.2.2
   assetPath: Packages/com.unity.performance.profile-analyzer
   name: com.unity.performance.profile-analyzer
   displayName: Profile Analyzer
@@ -3970,7 +3972,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.1.33
   source: 1
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.test-framework@1.1.33
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.test-framework@1.1.33
   assetPath: Packages/com.unity.test-framework
   name: com.unity.test-framework
   displayName: Test Framework
@@ -4110,7 +4112,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.2.6
   source: 1
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.testtools.codecoverage@1.2.6
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.testtools.codecoverage@1.2.6
   assetPath: Packages/com.unity.testtools.codecoverage
   name: com.unity.testtools.codecoverage
   displayName: Code Coverage
@@ -4217,7 +4219,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.0.1
   source: 1
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.settings-manager@2.0.1
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.settings-manager@2.0.1
   assetPath: Packages/com.unity.settings-manager
   name: com.unity.settings-manager
   displayName: Settings Manager
@@ -4280,7 +4282,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.6
   source: 1
-  resolvedPath: D:\Unity Games\Uni VR Modulis\VR-Baubai\Library\PackageCache\com.unity.ext.nunit@1.0.6
+  resolvedPath: G:\Projektai\VR-Baubai\Library\PackageCache\com.unity.ext.nunit@1.0.6
   assetPath: Packages/com.unity.ext.nunit
   name: com.unity.ext.nunit
   displayName: Custom NUnit
@@ -4347,4 +4349,4 @@ m_ResolvedPackages:
   isDeprecated: 0
   deprecationMessage: 
   fingerprint: 
-m_BuiltInPackagesHash: c3eb25d0497c2388653acee44055294647de272e
+m_BuiltInPackagesHash: f8c75c7cb84b065cb30c3dd708a8c60fdae5793a
