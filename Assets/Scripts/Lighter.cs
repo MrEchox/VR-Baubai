@@ -12,7 +12,7 @@ public class Lighter : MonoBehaviour
     public XRGrabInteractable grabInteractable;  
 
     private bool isLit = false;                    
-    private bool isGrabbed = false;               
+    private bool isGrabbed = true;               
 
     // Start is called before the first frame update
     void Start()

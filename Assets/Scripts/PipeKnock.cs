@@ -68,3 +68,33 @@ public class PipeKnock : MonoBehaviour
         return pattern;
     }
 }
+
+/*using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PipeKnock : MonoBehaviour
+{
+    public AudioSource knockSound;
+    public float timeBetweenKnocks = 0.1f;
+    public float timeBetweenPatterns = 2f;
+    public float waitTimeBetweenRepeats = 3f;
+    public int patternLength;
+    public List<int> knockPattern;
+
+    private IEnumerator DelayedWhileLoop()
+    {
+        
+        while (true)
+        {
+            knockSound.Play();
+            yield return new WaitForSeconds(1); // Delay for 1 second
+        }
+    }
+
+    void Start()
+    {
+        StartCoroutine(DelayedWhileLoop());
+    }
+    
+}*/
