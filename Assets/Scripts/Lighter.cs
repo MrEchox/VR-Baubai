@@ -6,10 +6,11 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Lighter : MonoBehaviour
 {
-    public GameObject flame;                         
+    public GameObject flame;                 
+    public GameObject light;
     public AudioSource igniteSound;                  
     public InputActionProperty igniteAction;       
-    public XRGrabInteractable grabInteractable;  
+    public XRGrabInteractable grabInteractable;
 
     private bool isLit = false;                    
     private bool isGrabbed = true;               
@@ -18,6 +19,7 @@ public class Lighter : MonoBehaviour
     void Start()
     {
         flame.SetActive(false);
+        light.SetActive(false);
 
         grabInteractable.onSelectEntered.AddListener(OnGrab);
         grabInteractable.onSelectExited.AddListener(OnRelease);
@@ -39,6 +41,7 @@ public class Lighter : MonoBehaviour
         isLit = !isLit;  
 
         flame.SetActive(isLit);
+        light.SetActive(isLit);
 
         if (igniteSound != null)
         {
