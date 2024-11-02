@@ -12,15 +12,19 @@ public class GeneratorControl : MonoBehaviour
     private XRGrabInteractable grabInteractable;
     private Vector3 previousPosition;
 
+    public bool isGeneratorOn { get  { return isOn; } }
+
     public float pullSpeedThreshold = 5f; // Minimum speed to activate
     public float pullDistanceThreshold = 0.1f; // Minimum distance to activate
     public float activationDelay = 0.5f; // Delay before allowing activation after grabbing
     private bool isActivationAllowed = false; // Flag to control activation state
+    private bool isOn;
 
     private void Start()
     {
         grabInteractable = handle.GetComponent<XRGrabInteractable>();
         previousPosition = handle.position;
+        isOn = false;
     }
 
     private void Update()
@@ -68,6 +72,7 @@ public class GeneratorControl : MonoBehaviour
     {
         if (!generatorAudioSource.isPlaying)
         {
+            isOn = true;
             generatorAudioSource.Play();
         }
     }

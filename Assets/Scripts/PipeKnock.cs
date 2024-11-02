@@ -8,12 +8,14 @@ public class PipeKnock : MonoBehaviour
     public float timeBetweenKnocks = 0.1f;
     public float timeBetweenPatterns = 2f;
     public float waitTimeBetweenRepeats = 3f;
-    public int patternLength;
-    public List<int> knockPattern;
+    private int patternLength;
+    private List<int> knockPattern;
+
+    public List<int> pattern { get { return knockPattern; } }
 
     private void Start()
     {
-        patternLength = Random.Range(3, 6); // 3-5 knock patterns
+        patternLength = Random.Range(3, 3); // 3-5 knock patterns
 
         knockPattern = GenerateKnockPattern(patternLength);
         StartCoroutine(PlayKnockPattern());

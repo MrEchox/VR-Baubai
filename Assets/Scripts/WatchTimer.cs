@@ -5,8 +5,9 @@ public class DigitalWatch : MonoBehaviour
 {
     public int timerMinutes = 21;
     private float minuteInterval = 60.0f;
-    public AudioSource beepSound;
-    public AudioSource alarmSound;
+    public AudioSource audioSource;
+    public AudioClip alarmSound;
+    public AudioClip beepSound;
 
     public GameObject[] number1Bars;  // The 7 bars for the first digit
     public GameObject[] number2Bars;  // The 7 bars for the second digit
@@ -76,16 +77,21 @@ public class DigitalWatch : MonoBehaviour
         if (timerMinutes < 0)
         {
             timerMinutes = 0;
-            alarmSound.Play();
+            audioSource.clip = alarmSound;
+            audioSource.Play();
             CancelInvoke("DecrementMinute");
             return;
         }
 
         if (timerMinutes % 5 == 0)
-            alarmSound.Play();
+        {
+            audioSource.clip = alarmSound;
+            audioSource.Play();
+        }
         else
         {
-            beepSound.Play();
+            audioSource.clip = beepSound;
+            audioSource.Play();
         }
 
         
