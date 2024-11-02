@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LighterFlame
   - PlayerEar
+  - HandTip
   layers:
   - Default
   - TransparentFX
