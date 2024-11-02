@@ -1,9 +1,12 @@
 using UnityEngine;
+using System.Collections;
 
 public class DigitalWatch : MonoBehaviour
 {
-    public int timerMinutes = 20;
-    private float minuteInterval = 60.0f; 
+    public int timerMinutes = 21;
+    private float minuteInterval = 60.0f;
+    public AudioSource beepSound;
+    public AudioSource alarmSound;
 
     public GameObject[] number1Bars;  // The 7 bars for the first digit
     public GameObject[] number2Bars;  // The 7 bars for the second digit
@@ -38,6 +41,7 @@ public class DigitalWatch : MonoBehaviour
 
     private void Start()
     {
+
         InvokeRepeating("TurnOnLED", 0.0f, flickerInterval);
         InvokeRepeating("DecrementMinute", 0.0f, minuteInterval);
     }
@@ -68,12 +72,23 @@ public class DigitalWatch : MonoBehaviour
     private void DecrementMinute()
     {
         timerMinutes--;
-        if ( timerMinutes < 0)
+
+        if (timerMinutes < 0)
         {
             timerMinutes = 0;
+            alarmSound.Play();
             CancelInvoke("DecrementMinute");
-            // Play a sound
+            return;
         }
+
+        if (timerMinutes % 5 == 0)
+            alarmSound.Play();
+        else
+        {
+            beepSound.Play();
+        }
+
+        
     }
 
     private void TurnOnLED()
