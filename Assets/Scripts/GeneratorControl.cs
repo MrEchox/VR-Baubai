@@ -23,7 +23,7 @@ public class GeneratorControl : MonoBehaviour
     private void Start()
     {
         grabInteractable = handle.GetComponent<XRGrabInteractable>();
-        previousPosition = handle.position;
+        UpdateHandlePoistion(handle.position);
         isOn = false;
     }
 
@@ -75,5 +75,11 @@ public class GeneratorControl : MonoBehaviour
             isOn = true;
             generatorAudioSource.Play();
         }
+    }
+
+    private void UpdateHandlePoistion(Vector3 newPos)
+    {
+        handle.position = newPos;
+        previousPosition = newPos;
     }
 }
