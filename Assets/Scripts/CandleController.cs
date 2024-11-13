@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.Rendering.HighDefinition;
 using UnityEngine;
+using UnityEngine.Android;
 
 public class CandleController : MonoBehaviour
 {
@@ -9,6 +11,9 @@ public class CandleController : MonoBehaviour
     public AudioClip successSound;
     public AudioClip extinguishSound;
     public GameObject pipes;
+
+    public Material pentagramMaterial;
+    public Light pentagramLight;
 
     public AudioSource fakeWallAudioSource;
     public GameObject fakeWall;
@@ -19,11 +24,18 @@ public class CandleController : MonoBehaviour
     private int currentPatternIndex = 0;
     private List<CandleScript> allCandles = new List<CandleScript>();
 
+    private bool isCompleted = false;
+
     void Start()
     {
         audioSource.clip = extinguishSound;
         fakeWallModelBefore = fakeWall.transform.Find("Fake-Wall_1").gameObject;
         fakeWallModelAfter = fakeWall.transform.Find("Fake-Wall_2").gameObject;
+
+        pentagramMaterial.EnableKeyword("_EMISSION");
+        pentagramLight.enabled = false;
+        pentagramLight.intensity = 0;
+        HDMaterial.SetEmissiveIntensity(pentagramMaterial, 0, UnityEditor.Rendering.HighDefinition.EmissiveIntensityUnit.Nits);
 
         fakeWallModelBefore.SetActive(true);
         fakeWallModelAfter.SetActive(false);
@@ -55,6 +67,8 @@ public class CandleController : MonoBehaviour
     }
     public void CheckCandle(CandleScript litCandle)
     {
+        if (isCompleted) return;
+
         if (currentPatternIndex < pattern.Count)
         {
             int expectedCandleNumber = pattern[currentPatternIndex];
@@ -81,6 +95,8 @@ public class CandleController : MonoBehaviour
 
     private void ResetCandles()
     {
+        if (isCompleted) return;
+
         foreach (CandleScript candle in allCandles)
         {
             candle.ExtinguishCandle();
@@ -96,15 +112,41 @@ public class CandleController : MonoBehaviour
     }
     private void Success()
     {
+        if (isCompleted) return;
+
+        isCompleted = true;
+
         if (audioSource != null && successSound != null)
         {
             fakeWallModelBefore.SetActive(false);
             fakeWallModelAfter.SetActive(true);
 
             fakeWallAudioSource.Play();
+            StartCoroutine(ActivatePentagram());
 
             StartCoroutine(PlaySuccessSound(new WaitForSeconds(2.0f)));
         }
+    }
+
+    private IEnumerator ActivatePentagram()
+    {
+        float elapsed = 0f;
+        pentagramLight.enabled = true;
+
+        while (elapsed < 8.0f)
+        {
+            if (!this.enabled) yield break;
+
+            elapsed += Time.deltaTime;
+
+            float emission = Mathf.Lerp(0.0f, 10.0f, elapsed / 8.0f);
+            float lightIntensity = Mathf.Lerp(0.0f, 60.0f, elapsed / 8.0f);
+
+            pentagramLight.intensity = lightIntensity;
+            HDMaterial.SetEmissiveIntensity(pentagramMaterial, emission, UnityEditor.Rendering.HighDefinition.EmissiveIntensityUnit.Nits);
+            yield return null;
+        }
+
     }
 
     private IEnumerator PlaySuccessSound(WaitForSeconds wait)
@@ -112,6 +154,7 @@ public class CandleController : MonoBehaviour
         yield return wait;
         audioSource.clip = successSound;
         audioSource.Play();
+
 
         this.enabled = false; // Turn it off, so player can light the rest of the candles ;)
     }

@@ -15,7 +15,7 @@ public class PipeKnock : MonoBehaviour
 
     private void Start()
     {
-        patternLength = Random.Range(3, 3); // 3-5 knock patterns
+        patternLength = Random.Range(2, 2); // 3-5 knock patterns
 
         knockPattern = GenerateKnockPattern(patternLength);
         StartCoroutine(PlayKnockPattern());
