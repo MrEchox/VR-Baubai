@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.XR.Interaction.Toolkit;
 using System.Collections;
+using Unity.XR.CoreUtils;
 
 public class GeneratorControl : MonoBehaviour
 {
@@ -9,7 +10,12 @@ public class GeneratorControl : MonoBehaviour
     public AudioSource pullAudioSource;
     public AudioSource generatorAudioSource;
     public GeneratorButtonController button;
+    public GameObject controlledDoorHandle;
+    public Light doorLight;
+    public AudioSource audioSource;
+
     private XRGrabInteractable grabInteractable;
+    private XRGrabInteractable doorGrabScript;
     private Vector3 previousPosition;
 
     public bool isGeneratorOn { get  { return isOn; } }
@@ -25,6 +31,11 @@ public class GeneratorControl : MonoBehaviour
         grabInteractable = handle.GetComponent<XRGrabInteractable>();
         UpdateHandlePoistion(handle.position);
         isOn = false;
+
+        doorGrabScript = controlledDoorHandle.GetComponent<XRGrabInteractable>();
+        doorGrabScript.enabled = false;
+
+        doorLight.enabled = false;
     }
 
     private void Update()
@@ -74,7 +85,18 @@ public class GeneratorControl : MonoBehaviour
         {
             isOn = true;
             generatorAudioSource.Play();
+
+            StartCoroutine(ActivateDoorComponentsAfterDelay());
         }
+    }
+
+    private IEnumerator ActivateDoorComponentsAfterDelay()
+    {
+        yield return new WaitForSeconds(5f);
+
+        doorGrabScript.enabled = true;
+        doorLight.enabled = true;
+        audioSource.Play();
     }
 
     private void UpdateHandlePoistion(Vector3 newPos)

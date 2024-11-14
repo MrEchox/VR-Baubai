@@ -20,9 +20,6 @@ public class Lighter : MonoBehaviour
     {
         flame.SetActive(false);
         light.SetActive(false);
-
-        grabInteractable.onSelectEntered.AddListener(OnGrab);
-        grabInteractable.onSelectExited.AddListener(OnRelease);
     }
 
     // Update is called once per frame
@@ -64,11 +61,5 @@ public class Lighter : MonoBehaviour
         {
             ToggleLighter(); 
         }
-    }
-
-    private void OnDestroy()
-    {
-        grabInteractable.onSelectEntered.RemoveListener(OnGrab);
-        grabInteractable.onSelectExited.RemoveListener(OnRelease);
     }
 }

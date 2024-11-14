@@ -6,12 +6,12 @@ public class ReturnToOriginOnRelease : MonoBehaviour
 {
     private XRGrabInteractable grabInteractable;
     public XRInteractionManager interactionManager;
-    private Vector3 originalPosition;
-    private Quaternion originalRotation;
+    private Vector3 originalLocalPosition;
+    private Quaternion originalLocalRotation;
 
     public Transform generator;
     public float maxUngrabDistance = 4.0f; // Maximum distance before ungrabbing
-    public float smoothSpeed = 10.0f; // Return speeed
+    public float smoothSpeed = 10.0f; // Return speed
 
     private Rigidbody handleRigidBody;
 
@@ -22,8 +22,9 @@ public class ReturnToOriginOnRelease : MonoBehaviour
 
         if (grabInteractable != null)
         {
-            originalPosition = transform.position;
-            originalRotation = transform.rotation;
+            // Store the initial local position and rotation relative to the generator
+            originalLocalPosition = transform.localPosition;
+            originalLocalRotation = transform.localRotation;
 
             grabInteractable.selectExited.AddListener(OnObjectUngrabbed);
         }
@@ -47,36 +48,36 @@ public class ReturnToOriginOnRelease : MonoBehaviour
             {
                 var interactor = grabInteractable.interactorsSelecting[0]; // Get the first interactor
                 interactionManager.SelectExit(interactor, grabInteractable);
-
             }
         }
     }
+
     private void OnObjectUngrabbed(SelectExitEventArgs args)
     {
-        StartCoroutine(ReturnToOrigin());
+        StartCoroutine(ReturnToLocalOrigin());
     }
 
-    private IEnumerator ReturnToOrigin()
+    private IEnumerator ReturnToLocalOrigin()
     {
-        handleRigidBody.isKinematic = true; // Temp disabling of physics
+        handleRigidBody.isKinematic = true; // Temporarily disable physics
 
         float elapsedTime = 0f;
         float duration = 0.4f; // Duration of the return
-        Vector3 startPosition = transform.position;
-        Quaternion startRotation = transform.rotation;
+        Vector3 startLocalPosition = transform.localPosition;
+        Quaternion startLocalRotation = transform.localRotation;
 
         while (elapsedTime < duration)
         {
-            // Interpolate position and rotation back to original
-            transform.position = Vector3.Lerp(startPosition, originalPosition, (elapsedTime / duration));
-            transform.rotation = Quaternion.Slerp(startRotation, originalRotation, (elapsedTime / duration));
+            // Interpolate position and rotation back to original local position and rotation
+            transform.localPosition = Vector3.Lerp(startLocalPosition, originalLocalPosition, (elapsedTime / duration));
+            transform.localRotation = Quaternion.Slerp(startLocalRotation, originalLocalRotation, (elapsedTime / duration));
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-        // Ensure the final position and rotation are set correctly
-        transform.position = originalPosition;
-        transform.rotation = originalRotation;
+        // Ensure final position and rotation are set correctly
+        transform.localPosition = originalLocalPosition;
+        transform.localRotation = originalLocalRotation;
 
         handleRigidBody.isKinematic = false; // Re-enable physics
     }

@@ -20,6 +20,9 @@ public class CandleController : MonoBehaviour
     private GameObject fakeWallModelBefore;
     private GameObject fakeWallModelAfter;
 
+    public GameObject watchObject;
+    private WatchTimer watch;
+
     public List<int> pattern;
     private int currentPatternIndex = 0;
     private List<CandleScript> allCandles = new List<CandleScript>();
@@ -29,8 +32,16 @@ public class CandleController : MonoBehaviour
     void Start()
     {
         audioSource.clip = extinguishSound;
+
         fakeWallModelBefore = fakeWall.transform.Find("Fake-Wall_1").gameObject;
+        if (fakeWallModelBefore == null)
+            Debug.LogError("Fake-Wall_1 not found in the Fake Wall GameObject.");
+
         fakeWallModelAfter = fakeWall.transform.Find("Fake-Wall_2").gameObject;
+        if (fakeWallModelAfter == null)
+            Debug.LogError("Fake-Wall_2 not found in the Fake Wall GameObject.");
+
+        watch = watchObject.GetComponent<WatchTimer>();
 
         pentagramMaterial.EnableKeyword("_EMISSION");
         pentagramLight.enabled = false;
@@ -73,7 +84,6 @@ public class CandleController : MonoBehaviour
         {
             int expectedCandleNumber = pattern[currentPatternIndex];
 
-            // Check if the lit candle matches the expected candle number
             if (litCandle.CandleNum == expectedCandleNumber)
             {
                 currentPatternIndex++;
@@ -87,8 +97,12 @@ public class CandleController : MonoBehaviour
             }
             else
             {
-                // Reset candles if the wrong candle is lit
+                // Reset candles if the wrong candle is lit + decrement the watch
                 ResetCandles();
+                if (watch != null)
+                    watch.DecrementAndPlaySound();
+                else
+                    Debug.LogWarning("Watch is not assigned or found.");
             }
         }
     }
@@ -107,6 +121,7 @@ public class CandleController : MonoBehaviour
         {
             audioSource.PlayOneShot(extinguishSound);
         }
+
 
         currentPatternIndex = 0;
     }
