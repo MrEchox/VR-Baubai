@@ -1,16 +1,15 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class AlarmClockController : MonoBehaviour
 {
-    public Collider alarmClockCollider;
     public AudioSource alarmSound;
     public AudioSource clickSound;
     public bool isAlarmOn = false;
 
-    void Start()
+    public ExitDoorController exitDoorController;
+
+    private void Start()
     {
         if (alarmSound != null)
         {
@@ -22,7 +21,6 @@ public class AlarmClockController : MonoBehaviour
     {
         if (alarmSound != null && !isAlarmOn)
         {
-            Console.Write("Alarm started!");
             alarmSound.Play();
             isAlarmOn = true;
         }
@@ -33,22 +31,23 @@ public class AlarmClockController : MonoBehaviour
         if (alarmSound != null && isAlarmOn)
         {
             alarmSound.Stop();
-            clickSound.Play();
+            if (clickSound != null)
+            {
+                clickSound.Play();
+            }
             isAlarmOn = false;
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (isAlarmOn && other.gameObject.CompareTag("Hand"))
+        if (other.GetComponent<XRDirectInteractor>() != null && isAlarmOn)
         {
             StopAlarm();
-            EnableExit();
+            if (exitDoorController != null)
+            {
+                exitDoorController.EnableExit();
+            }
         }
     }
-    public void EnableExit()
-    {
-        Debug.Log("Exit enabled!");
-    }
-
 }
