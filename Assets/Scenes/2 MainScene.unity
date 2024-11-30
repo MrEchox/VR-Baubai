@@ -60318,7 +60318,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193401364}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f7659694b784af478df503eb9dd2de6, type: 3}
   m_Name: 
@@ -60349,7 +60349,6 @@ MonoBehaviour:
   LED: {fileID: 844477642}
   onMaterialLED: {fileID: 2100000, guid: cce913cafb985744a9804685e3003c83, type: 2}
   offMaterialLED: {fileID: 2100000, guid: 348a66e6f3ddbbd41a6d09aaef9ad5fe, type: 2}
-  moveProvider: {fileID: 1853989193}
 --- !u!1 &1195954481
 GameObject:
   m_ObjectHideFlags: 0
@@ -106043,8 +106042,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioSource: {fileID: 1760006593}
-  baseFootstepDelay: 0.7
-  maxFootstepDelay: 3
+  baseFootstepDelay: 0.5
+  maxFootstepDelay: 2
 --- !u!1 &1858777985
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,7 +29,6 @@ public class WatchTimer : MonoBehaviour
     private bool isTimerRunning = false;
     private bool blinkAllBars = true;  // Control for blinking all bars
 
-    public ActionBasedContinuousMoveProvider moveProvider; // Reference to the ActionBasedContinuousMoveProvider
 
     // Bar configurations for each digit (0 to 9)
     private readonly bool[][] digitPatterns = new bool[][]
@@ -48,13 +47,6 @@ public class WatchTimer : MonoBehaviour
 
     private void Start()
     {    
-
-        if (moveProvider != null)
-        {
-            moveProvider.enabled = false;
-            Console.WriteLine("moveProvider disabled!");
-        }
-
 
         StartCoroutine(StartTimerWithDelay(5f)); // Start the timer after 5-second delay
         InvokeRepeating("TurnOnLED", 0.0f, flickerInterval);
@@ -114,11 +106,6 @@ public class WatchTimer : MonoBehaviour
         audioSource.pitch = 1f; // Reset pitch
         isTimerRunning = true;
         blinkAllBars = false;  // Stop blinking
-
-        if (moveProvider != null)
-        {
-            moveProvider.enabled = true;
-        }
 
         InvokeRepeating("DecrementMinute", 0.0f, minuteInterval);
     }
