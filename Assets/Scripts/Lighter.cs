@@ -13,37 +13,64 @@ public class Lighter : MonoBehaviour
     public XRGrabInteractable grabInteractable;
 
     private bool isLit = false;                    
-    private bool isGrabbed = true;               
+    private bool isGrabbed = true;
+    private float extinguishTimer;
+    private float elapsedTime;
 
     // Start is called before the first frame update
     void Start()
     {
         flame.SetActive(false);
         light.SetActive(false);
+
+        ScheduleNextExtinguish();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        elapsedTime += Time.deltaTime;
         if (isGrabbed && igniteAction.action.WasPressedThisFrame())
         {
-            ToggleLighter();
+            TryIgnite();
+        }
+
+        if (isLit)
+        {
+            extinguishTimer -= Time.deltaTime;
+            if (extinguishTimer <= 0)
+            {
+                Extinguish();
+                ScheduleNextExtinguish();
+            }
         }
     }
 
-  
-    void ToggleLighter()
+    void TryIgnite()
     {
-        isLit = !isLit;  
-
-        flame.SetActive(isLit);
-        light.SetActive(isLit);
-
         if (igniteSound != null)
         {
             igniteSound.Play();
         }
+
+        if (!isLit && Random.Range(0, 5) == 0) // 1 in 4 chance of lighting
+        {
+            isLit = true;
+            flame.SetActive(isLit);
+            light.SetActive(isLit);
+        }
+        else if (isLit)
+        {
+            ToggleLighter(false);
+        }
+    }
+
+
+    void ToggleLighter(bool state)
+    {
+        isLit = state;
+        flame.SetActive(isLit);
+        light.SetActive(isLit);
     }
 
     private void OnGrab(XRBaseInteractor interactor)
@@ -59,7 +86,21 @@ public class Lighter : MonoBehaviour
 
         if (isLit)
         {
-            ToggleLighter(); 
+            ToggleLighter(false); 
         }
     }
+
+    public void Extinguish()
+    {
+        if (isLit)
+        {
+            ToggleLighter(false);
+        }
+    }
+    void ScheduleNextExtinguish()
+    {
+        // Random interval between 30 and 60 seconds
+        extinguishTimer = Random.Range(30f, 60f);
+    }
+
 }
