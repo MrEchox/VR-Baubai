@@ -88,19 +88,27 @@ public class CandleController : MonoBehaviour
             {
                 currentPatternIndex++;
 
-                // Check if the pattern is completed
+                
                 if (currentPatternIndex >= pattern.Count)
                 {
                     Success();
-                    currentPatternIndex = 0; // Reset for the next pattern
+                    currentPatternIndex = 0; 
                 }
             }
             else
             {
-                // Reset candles if the wrong candle is lit + decrement the watch
+
+                
                 ResetCandles();
+
+
                 if (watch != null)
-                    watch.DecrementAndPlaySound();
+                {
+                    if (watch.timerMinutes > 4)  
+                    {
+                        watch.DecrementAndPlaySound(); 
+                    }                
+                }
                 else
                     Debug.LogWarning("Watch is not assigned or found.");
             }

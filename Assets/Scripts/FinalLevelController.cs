@@ -26,19 +26,19 @@ public class FinalLevelController : MonoBehaviour
         if (other.CompareTag("Player") && !hasStarted)
         {
             Console.Write("Accessed last level, playing sounds and modifying movement speed");
-            if (heartbeatAudio != null) // Play heartbeat sound
+            if (heartbeatAudio != null) 
             {
                 heartbeatAudio.Play();
             }
-            if (suspenseAudio != null) // Play suspense sound
+            if (suspenseAudio != null) 
             {
                 suspenseAudio.Play();
             }
-            if (playerMovement != null) // Modify player movement speed
+            if (playerMovement != null) 
             {
                 playerMovement.moveSpeed = increasedSpeed;
             }
-            if (alarmClockController != null) // Start alarm clock
+            if (alarmClockController != null) 
             {
                 alarmClockController.StartAlarm();
             }
