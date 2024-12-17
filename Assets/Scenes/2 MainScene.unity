@@ -3029,7 +3029,7 @@ HingeJoint:
   m_ExtendedLimits: 0
   m_UseAcceleration: 0
   m_Limits:
-    min: -176.63315
+    min: -181.47644
     max: 0
     bounciness: 0
     bounceMinVelocity: 0.2
@@ -64277,9 +64277,10 @@ MonoBehaviour:
   doorOpeningSound: {fileID: 1153425060}
   ambientNoiseSound: {fileID: 833938954}
   whiteGlowMaterial: {fileID: 2100000, guid: 63963fd68b1af294585470e5f88ee1d1, type: 2}
-  door: {fileID: 1713317838}
-  openPosition: {x: 10, y: 0, z: 0}
-  openRotation: {x: 0, y: -90, z: 0}
+  door: {fileID: 94879158}
+  openPosition: {x: -10, y: 3.905365, z: 17.26}
+  openRotation: {x: 0, y: 0, z: 0}
+  doorRenderer: {fileID: 1713317841}
 --- !u!65 &1345517759
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -78626,7 +78627,7 @@ GameObject:
   - component: {fileID: 1533648734}
   - component: {fileID: 1533648733}
   - component: {fileID: 1533648732}
-  - component: {fileID: 1533648735}
+  - component: {fileID: 1533648736}
   m_Layer: 0
   m_Name: LastLevel
   m_TagString: Untagged
@@ -78700,7 +78701,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.763485, y: 3.8345022, z: 1}
   m_Center: {x: -0.5321369, y: 1.4172511, z: 0}
---- !u!114 &1533648735
+--- !u!114 &1533648736
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105971,7 +105972,7 @@ Transform:
   m_GameObject: {fileID: 1853989185}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.09, y: 0, z: 3.06}
+  m_LocalPosition: {x: -2.11, y: 0, z: -0.05}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -106012,7 +106013,7 @@ MonoBehaviour:
   m_EnableTurnAround: 1
   m_DelayTime: 0
   m_LeftHandSnapTurnAction:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Left Hand Snap Turn
       m_Type: 0
@@ -106050,7 +106051,7 @@ MonoBehaviour:
   m_System: {fileID: 1853989194}
   m_TurnSpeed: 60
   m_LeftHandTurnAction:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Left Hand Turn
       m_Type: 0
@@ -106060,7 +106061,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 1010738217276881514, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_Reference: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_RightHandTurnAction:
     m_UseReference: 1
     m_Action:
@@ -106131,7 +106132,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_RightHandMoveAction:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Right Hand Move
       m_Type: 0
@@ -106141,7 +106142,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!114 &1853989194
 MonoBehaviour:
   m_ObjectHideFlags: 0

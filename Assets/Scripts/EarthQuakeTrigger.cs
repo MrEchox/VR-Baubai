@@ -6,7 +6,8 @@ public class EarthquakeTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) 
+        
+        if (other.CompareTag("Player") && PlayerPrefs.GetInt("screenShake", 1) == 1)
         {
             screenShake.TriggerShake();
         }
