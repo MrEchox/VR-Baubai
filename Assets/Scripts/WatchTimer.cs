@@ -117,38 +117,42 @@ public class WatchTimer : MonoBehaviour
 
         if (!isTimerRunning) return;
 
-        if (timerMinutes >= 1)
+        if (timerMinutes > 0)
         {
             timerMinutes--;
             Debug.Log("Timer decremented: " + timerMinutes);
         }
-
-        if (timerMinutes < 0)
+        else if (timerMinutes == 0) // Handle reaching 0 minutes
         {
+            timerMinutes--; // Move to -1 to avoid this block running repeatedly
             isTimerRunning = false;
-            timerMinutes = -1;
+
+            Debug.Log("Timer reached zero. Ending timer.");
             audioSource.clip = alarmSound;
             audioSource.Play();
             CancelInvoke("DecrementMinute");
 
             // Play jumpscare sound after 3 seconds
             Invoke("PlayJumpscareSound", 3.0f);
+
+            // Transfer to "FailScene"
             SceneManager.LoadScene("3 FailScene");
             return;
         }
 
         // Play alarm every 5 minutes, otherwise play beep
-        if (timerMinutes % 5 == 0)
+        if (timerMinutes > 0 && timerMinutes % 5 == 0)
         {
             audioSource.clip = alarmSound;
             audioSource.Play();
         }
-        else
+        else if (timerMinutes > 0)
         {
             audioSource.clip = beepSound;
             audioSource.Play();
         }
     }
+
 
     // Function to decrement the timer manually
     public void DecrementAndPlaySound()

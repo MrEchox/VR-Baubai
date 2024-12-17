@@ -9,7 +9,7 @@ public class PipeKnock : MonoBehaviour
     public float timeBetweenPatterns = 2f;
     public float waitTimeBetweenRepeats = 3f;
     private int patternLength;
-    private List<int> knockPattern;
+    public List<int> knockPattern;
 
     public List<int> pattern { get { return knockPattern; } }
 
